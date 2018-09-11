@@ -1,0 +1,87 @@
+@w:75rem;
+
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+
+.divWrap{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background: url('http://res1.eqh5.com/FuEdIRXdM7NWOg5cs-8guyLiNwrU?imageMogr2/auto-orient/thumbnail/378x621%3E') no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
+    .divTop{
+        height:150/@w;
+        margin-bottom:10px;
+        .divP{
+            height:150/@w;
+            margin:20/@w 0;
+            padding-left:20/@w;
+            position: absolute;
+            animation: divTop .6s linear  forwards;
+        }
+    }
+    .divTwo{
+        display: flex;
+        .imgOne{
+            margin-left:40px;
+            opacity: 0;
+            animation: imgOne 1s ease-out forwards;
+        }
+        .imgTwo{
+            margin-left:20px;
+            opacity: 0;
+            animation: imgOne 1s ease-out .3s forwards;
+        }
+        .imgThree{
+            margin-left:20px;
+            animation: imgThree 1s linear alternate infinite ;
+            transform-origin: center center;
+        }
+    }
+   
+}
+
+@keyframes divTop{
+   from{
+     top:-100px;
+   }
+   to{
+     top:0px;
+   }
+}
+@-webkit-keyframes divTop{
+    from{
+      top:-100px;
+    }
+    to{
+      top:0px;
+    }
+ }
+
+
+
+ @keyframes imgOne{
+     0%{
+         transform: translateX(-400px);
+         opacity: 1;
+     }
+     100%{
+         transform: translateX(0px);
+         opacity: 1;
+     }
+ }
+ 
+ @keyframes imgThree{
+    0%{
+        transform: scale3d(.8,.8,1) rotateZ(-30deg);
+    }
+    100%{
+        transform: rotateZ(30deg) scale3d(1.2,1.2,1);
+    }
+}
