@@ -1,0 +1,115 @@
+@h:75rem;
+*{
+    margin: 0;
+    padding:0;
+    border:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.top{
+    width:750/@h;
+    height:100/@h;
+    border-bottom: 2px solid #ccc;
+    font-size:33/@h;
+    overflow: hidden;
+    .topCenter{
+        position: relative;
+        width:684/@h;
+        height:100/@h;
+        margin: 0 auto;
+        overflow: hidden;
+        .jt{
+            position: absolute;
+            float: left;
+            margin-top:25/@h;
+            display: inline-block;
+            width:30/@h;
+            height:40/@h;
+            background: url("../img/b.jpg") no-repeat center center;
+            animation: jt 1s ease ;
+        }
+
+        .jf{
+            float: right;
+            display: inline-block;
+            width:654/@h;
+            height:100/@h;
+            line-height:80/@h;
+            color:#212121;
+            text-align: center;
+        }
+    }
+}
+@keyframes jt{
+    from{
+      transform: rotate(0)
+    }
+    to{
+        transform: rotate(30deg)
+    }
+}
+.wrap{
+    width:750/@h;
+    height:281/@h;
+    .wrapCenter{
+        width:700/@h;
+        height:281/@h;
+        margin: 0 auto;
+        padding-top:30/@h;
+        .photo{
+            width:680/@h;
+            height:220/@h;
+            background: url("../img/a.jpg") no-repeat center center;
+            padding-top:52/@h;
+            border-radius: 15/@h;
+            margin: 0 auto;
+            p{
+                font-size:30/@h;
+                color:#fff;
+                text-align: center;
+            }
+            .p{
+                font-size:40/@h;
+                margin-top:18/@h;
+            }
+        }
+        .xiangqing{
+            margin-top:50/@h;
+            p{
+                font-size:30/@h;
+                color:#212121;
+                padding-left:25/@h;
+                border-left:4/@h solid #45c73e;
+            }
+            ul{
+                width:684/@h;
+                font-size:28/@h;
+                margin-top:50/@h;
+                li{
+                    width:684/@h;
+                    height:100/@h;
+                    line-height:100/@h;
+                    border-bottom: 2/@h solid #e7e7e7;
+                    color:#616161;
+                    .spanOne{
+                        float: left;
+                        display: inline-block;
+                        width:238/@h;
+                    }
+                    .spanTwo{
+                        float: left;
+                        display: inline-block;
+                        width:340/@h;
+                    }
+                    .spanThree{
+                        float:right;
+                        display: inline-block;
+                        width:100/@h;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
