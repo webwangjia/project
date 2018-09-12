@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model中使用组件</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <style>
+        .primary{
+            background:green;
+            color:#fff;
+        }
+        .success{
+            background:#409eff;
+            color:#fff;
+        }
+        .info{
+            background:#909399;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<!-- 第一个组件 v-model 在vue中的实现原理-->
+<!-- <input v-model="text" />-->
+<h1>第一个组件</h1>
+    <div id="app">
+       <input type="text" 
+       :value="text"
+       @input="inputVal"/>
+       <p>{{text}}</p>
+    </div>
+    <script>
+       // v-model 在vue中的实现原理
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                text: 'parent'
+            },
+            methods:{
+                inputVal(e){
+                 this.text = e.target.value;
+                }
+            }
+        })
+    </script>
+
+
+    <!-- 第二个组件 v-model 在vue中组件的实现原理 -->
+
+    <h1>第二个组件</h1>
+    <div id="root">
+       <model-input v-model="text"></model-input>
+       <!-- <model-input  :valve="text" @input="text = $event"></model-input>  -->
+       <p>{{text}}</p>
+    </div>
+    <script>
+        let input = `<div>
+            <input :value="value" @input="$emit('input',$event.target.value)"/>
+        </div>`
+        Vue.component('model-input',{
+           data(){
+              return {
+
+              }
+           },
+           props:['value'],
+           template:input,
+        })
+
+        let vmTwo = new Vue({
+            el:'#root',
+            data:{
+                text:'第二个组件'
+            },
+        })
+    </script>
+</body>
+</html>

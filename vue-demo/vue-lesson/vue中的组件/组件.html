@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js练习</title>
+    <style>
+        .primary{
+            background:green;
+            color:#fff;
+        }
+        .success{
+            background:#409eff;
+            color:#fff;
+        }
+        .info{
+            background:#909399;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+      <my-button type="primary"></my-button>
+      <my-button type="success"></my-button>
+      <!-- <my-com></my-com> -->
+    </div>
+
+    <div id="root">
+         <my-button type="info"></my-button>
+         <component-two></component-two>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        Vue.component('my-button',{
+            data:function(){
+                return {
+                    count:0,
+                }
+            },
+            props:['type'],
+            template:'<button @click="count++" :class="type">按钮{{type}} {{count}}</button>',
+        })
+
+
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                parent: 'parent'
+            }
+        })
+      
+        // 局部组件
+        let componentTwo = {
+            template:`<div>我是局部组件</div>`
+        }
+
+        let vmTwo = new Vue({
+            el:"#root",
+            data:{
+                parent: 'parent'
+            },
+            components:{
+                componentTwo,
+            },
+            beforeCreate(){
+                console.log(this.parent)
+            },
+            created(){
+                console.log(this.parent)
+            }
+        })
+
+       
+    </script>
+</body>
+</html>

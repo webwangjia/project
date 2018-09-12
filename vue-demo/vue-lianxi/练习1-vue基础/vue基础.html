@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue基础练习</title>
+</head>
+<body>
+    <div class="app">
+        <div>姓名：{{name}}</div>
+        <div>年龄：{{age}}</div>
+        <div v-html="text">文本：</div>
+        <div v-if="isshow">显示隐藏v-if</div>
+        <div v-show="isshow">显示隐藏v-show</div>
+        <div>
+            <a v-bind:href="href" target="-blank">我是超链接</a>
+            <img :src="src" >
+        </div>
+        <div v-for="jiajia in 3">{{jiajia}}</div>
+        <div v-for="jiajia in fun">{{jiajia.name}}今年{{jiajia.age}}岁</div>
+        <div>
+            <button v-on:click="funF">点击</button>
+            <button @click="funF">点击</button>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+    let vm=new Vue({
+        el:".app",
+        data:{
+            name:"king",
+            age:23, 
+            text:"<h1>我是标题</h1>",
+            isshow:false,
+            href:"http://webxiaoma.com",
+            src:"http://webxiaoma.com/img/manong.jpg",
+            fun:[
+                {
+                    name:"老王",
+                    age:23,
+                },
+                {
+                    name:"老李",
+                    age:27,
+                },
+            ]
+        },
+        methods:{
+            funF(){
+                alert("点击我了")
+            }
+        }
+    })
+    </script>
+</body>
+</html>
