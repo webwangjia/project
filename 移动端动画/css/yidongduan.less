@@ -4,8 +4,132 @@
     border:0;
     box-sizing: border-box;
 }
+@w:75rem;
 .wrap{
-    width:100%;
-    height: 100vh;
-    background: url("https://res1.eqh5.com/FtSjDFy7MHPlwrP72EdLgNM0cQ7k?imageMogr2/auto-orient/thumbnail/317x459%3E")
+    position: relative;
+    width:750/@w;
+    height:100vh;
+    background: url("../img/ditu.png") no-repeat center center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    .logo{
+        position: absolute;
+        left:-200/@w;
+        width:180/@w;
+        height:100/@w;
+        background: url("../img/logo.png") no-repeat center center;
+        background-size:100% auto;
+        animation: logo  .8s  ease 3s forwards;
+    }
+    .wo{
+        position: relative;
+        width:120/@w;
+        height:150/@w;
+        img{
+            display: inline-block;
+            opacity: 0;
+            position: absolute;
+            top:100/@w;
+            left:310/@w;
+            width:100%;
+            height:100%;
+            animation: wmb .4s ease .3s forwards;
+        }
+    }
+    .men{
+        position: relative;
+        width:150/@w;
+        height:150/@w;
+        img{
+            display: inline-block;
+            opacity: 0;
+            position: absolute;
+            top:100/@w;
+            left:360/@w;
+            width:100%;
+            height:100%;
+            animation: wmb .4s ease .8s forwards;
+        }
+    }
+    .bu{
+        position: relative;
+        width:180/@w;
+        height:200/@w;
+        img{
+            display: inline-block;
+            opacity: 0;
+            position: absolute;
+            top:20/@w;
+            left:210/@w;
+            width:100%;
+            height:100%;
+            animation: wmb .4s ease 1.2s forwards;
+        }
+    }
+    .yi{
+        position: relative;
+        width:180/@w;
+        height:80/@w;
+        img{
+            display: inline-block;
+            opacity: 0;
+            position: absolute;
+            top:-50/@w;
+            left:400/@w;
+            width:100%;
+            height:100%;
+            animation: wmb .4s ease 1.6s forwards;
+        }
+    }
+    .yang{
+        position: relative;
+        width:180/@w;
+        height:180/@w;
+        img{
+            display: inline-block;
+            position: absolute;
+            opacity: 0;
+            top:-30/@w;
+            left:280/@w;
+            width:100%;
+            height:100%;
+            animation: wmb .4s ease 2s forwards;
+        }
+    }
+    .xiao{
+        position: relative;
+        width:50/@w;
+        height:90/@w;
+        img{
+            display: inline-block;
+            position: absolute;
+            opacity: 0;
+            top:-550/@w;
+            left:280/@w;
+            width:100%;
+            height:100%;
+            animation: wmb .4s ease 3.5s forwards;
+        }
+    }
+}
+
+@keyframes logo{
+    from{
+        left:-200/@w;
+        top:100/@w;
+    }to{
+        left:35/@w;
+        top:100/@w;
+    }
+}
+
+@keyframes wmb{
+    0%{
+        transform: rotateZ(0deg);
+        opacity: 0;
+    }
+    100%{
+        transform: rotateZ(360deg);
+        opacity: 1;
+    }
 }
