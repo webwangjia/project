@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            background: black;
+        }
+        .oneDiv{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+        .active{
+            width:200px;
+            height:200px;
+            background:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div :class="{oneDiv:isShow}"></div>
+        <div :class="isShow?'active':'oneDiv'"></div>
+        <button @click="changeClass">点击</button>
+
+        <div :style="{'backgroundColor':'green','borderRadius':'30px'}">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+             el:'#root',
+             data:{
+                isShow:true,
+             },
+             methods:{
+                 changeClass(){
+                    this.isShow = !this.isShow
+                 }
+             }
+         })
+
+        
+    </script>
+</body>
+</html>

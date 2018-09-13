@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div>{{reverseMsg}}</div>
+        <div>{{change}}</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+             el:'#root',
+             data:{
+                message:'hello world',
+                change:'',
+             },
+             computed:{
+                 reverseMsg(){
+                   return this.message.split('').reverse().join("")
+                 },
+             },
+             watch:{
+                 message(val){
+                     console.log(val)
+                     this.change = "message 变化了"
+                 }
+             },
+             methods:{
+               
+             }
+         })
+
+         setTimeout(function(){
+            vm.message = "王佳佳"
+         },2000)
+
+    </script>
+</body>
+</html>

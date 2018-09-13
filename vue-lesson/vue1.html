@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js练习</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>姓名：{{ name }}</div>
+        <div>年龄：{{ age }}</div>
+        <div v-html="text">文本：</div>
+        <div v-if="isShow">显示隐藏v-if</div>
+        <div v-show="isShow">显示隐藏v-show</div>
+        <div>
+            <a v-bind:href="url">我是超链接</a>
+            <img :src="srcUrl"/>
+        </div>
+        <div>
+            <button v-on:click="buttonFun">
+                点击我
+            </button>
+            <button @click="buttonFun">
+                    点击我
+           </button>
+        </div>
+
+        <div>
+            <p v-for="item in 3" :key="item">{{item}}</p>
+            <p v-for="(item,index) in forDataAry" :key="index">
+                {{item.name}} 今年是 {{item.age}} 岁
+            </p>
+        </div>
+
+        <div>
+            <input v-model="moduleDate" type="text">
+            <p>{{moduleDate}}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                name:"King",
+                age:23,
+                text:"<h1>我是标题</h1>",
+                isShow:false,
+                url:'http://webxiaoma.com',
+                srcUrl:'http://webxiaoma.com/img/manong.jpg',
+                forDataAry:[
+                   {
+                       name:"老王",
+                       age:23
+                   },{
+                       name:"老李",
+                       age:25
+                   }
+                ],
+                moduleDate:'我是双向绑定'
+            },
+            methods:{
+                buttonFun(){
+                    alert("点击我了")
+                }
+            }
+        })
+
+       console.log( vm.name)
+    </script>
+</body>
+</html>

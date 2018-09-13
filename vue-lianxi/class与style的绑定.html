@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class与style的绑定</title>
+    <style>
+        .bangding{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div v-bind:class="{ bangding: active }"></div>
+        <div v-bind:style="{color:colorOne,fontSize:fontSizeOne+'px'}">你好</div>
+        <div :style="[objc,objd]">教师节</div>
+        <h1 v-if="ok">Yes</h1>
+        <h1 v-else>No</h1>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        let vm=new Vue({
+            el:".app",
+            data:{
+                active:true,
+                colorOne:"red",
+                fontSizeOne:30,
+                ok:false,
+                objc:{
+                    color:"green",
+                    fontSize:15+"px",                 
+                },
+                objd:{
+                    width:100+"px",
+                    height:100+"px",
+                    background:"black"
+                }
+            },
+        })
+    
+    </script>
+</body>
+</html>

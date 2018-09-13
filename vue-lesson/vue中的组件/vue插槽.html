@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js练习</title>
+    <style>
+        .primary{
+            background:green;
+            color:#fff;
+        }
+        .success{
+            background:#409eff;
+            color:#fff;
+        }
+        .info{
+            background:#909399;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+      <my-button type="primary">主要按钮</my-button>
+      <my-button type="success">成功按钮</my-button>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+      // 使用slot来显示插槽
+        Vue.component('my-button',{
+            data:function(){
+                return {
+                    count:0,
+                }
+            },
+            props:['type'],
+            template:`<button :class="type">
+                            <slot></slot>
+                        </button>`,
+        })
+
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                parent: 'parent'
+            }
+        })
+
+    </script>
+</body>
+</html>

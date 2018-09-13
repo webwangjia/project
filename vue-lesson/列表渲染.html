@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js练习</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>{{items[0]}}</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                items:[1,2,3],
+                nowObj:{
+                    name:'King',
+                }
+            }
+        })
+        
+        setTimeout(function(){
+           vm.items[0] = 10;
+           // 虽然变化，但是页面没有相应
+           console.log(vm.items[0])
+        },2000)
+
+        setTimeout(function(){
+            // 解决上面问题使用vue.$set()
+           vm.$set(vm.items,0,20)
+        },5000)
+    </script>
+</body>
+</html>
