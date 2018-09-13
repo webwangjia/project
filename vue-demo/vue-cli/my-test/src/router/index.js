@@ -5,6 +5,7 @@ import Test from '@/components/Test'
 import {routerOne,dingshi} from '@/components'
 
 import {All,One,Two} from '@/components/router'
+import{total,yi,er} from '@/components/lianxiRouter'
 
 Vue.use(Router)
 
@@ -42,6 +43,18 @@ const router = new Router({
           component:Two,
         }
       ]
+    },{
+      path:'total',
+      component:total,
+      children:[
+        {
+          path:'/yi',
+          component:yi,
+        },{
+          path:'/er',
+          component:er,
+        }
+      ]
     }
   ]
 })
@@ -52,5 +65,3 @@ router.beforeEach((to,form,next)=>{
    next()
 })
 
-
-export default router
