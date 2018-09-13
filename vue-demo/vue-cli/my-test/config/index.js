@@ -10,11 +10,19 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: { // 请求代理
+      '/api':{
+          target: 'http://jryg.ngrok.xiaomiqiu.cn/pc-api',
+          changeOrigin: true,
+          pathRewrite:{
+            '^/api':''
+          }
+      }
+    }, 
 
     // Various Dev Server settings
-    host: '192.168.1.101', // can be overwritten by process.env.HOST
-    port:8082, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: 'localhost', // can be overwritten by process.env.HOST
+    port:8088, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors:  true,

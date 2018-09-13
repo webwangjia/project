@@ -14,8 +14,8 @@
         },
         props:['id','msg'],
         created(){
-          console.log(this.id)
-          console.log(this.msg)
+        //   console.log(this.id)
+        //   console.log(this.msg)
         }
     }
 </script>

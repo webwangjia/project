@@ -60,8 +60,9 @@ const router = new Router({
 })
 
 router.beforeEach((to,form,next)=>{
-   console.log(to)
-   console.log(form)
+  //  console.log(to)
+  //  console.log(form)
    next()
 })
 
+export default router

@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <p>{{reqData.name}}</p>
     <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Test from './Test'
 
 export default {
@@ -29,13 +31,29 @@ export default {
       },{
         name:'小牛',
         age:27
-      }]
+      }],
+      reqData:{}
     }
+  },
+  created(){
+      this.showListReq()
   },
   methods:{
       changeMsg(val){
          this.msg = val;
-      } 
+      },
+      showListReq(){
+        axios({
+           method:'get',
+           url:'/api/showList',
+        }).then(res=>{
+           console.log(res.data)
+           this.reqData = res.data[0]
+        }).catch(err=>{
+
+        })
+      }
+
   },
   components:{
     Test
