@@ -37,6 +37,16 @@ export default {
   },
   created(){
       this.showListReq()
+
+      let ary = [1,2,3,4,5]
+      let ary1 = [5,6,7,8,5]
+      let obj = {
+        name:1,
+        age:23
+      }
+      console.log(ary)
+      console.log([...ary,...ary1])
+      console.log(...obj)
   },
   methods:{
       changeMsg(val){
