@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import { Home,Login, main,Register} from '@/components'
-import {  header,footer} from '@/layout'
+import {  Header,Footer} from '@/layout'
 
 
 

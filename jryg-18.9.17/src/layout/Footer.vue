@@ -1,13 +1,13 @@
 <template>
   <div>
-    我是首页
+    我是底部
   </div>
 </template>
 
 <script>
 export default {
-  data:{
-    return:{
+  data(){
+    return {
 
     }
   }
@@ -18,5 +18,3 @@ export default {
 <style lang="less" scoped>
 
 </style>
-
-

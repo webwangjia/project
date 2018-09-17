@@ -1,18 +1,18 @@
 <!--  -->
 <template>
   <div class="layout">
-      <header></header>
+      <Header></Header>
       <div class="content">
          <router-view></router-view>
       </div>
-      <footer></footer>
+      <Footer></Footer>
   </div>
 </template>
 
 <script>
 
-import header from '@/layout/header'
-import footer from '@/layout/footer'
+import Header from '@/layout/Header'
+import Footer from '@/layout/Footer'
 
 
 export default {
@@ -28,8 +28,8 @@ export default {
   methods: {},
 
   components: {
-      header,
-      footer
+      Header,
+      Footer
   },
 }
 
