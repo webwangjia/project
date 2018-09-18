@@ -14,12 +14,20 @@
 </template>
 
 <script>
+import { mapState,mapActions } from "vuex";
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
      
     }
+  },
+  created() {
+    this.homeRequest()
+  },
+  methods:{
+    ...mapActions('home',['homeRequest'])
   }
 }
 </script>

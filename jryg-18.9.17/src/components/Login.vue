@@ -10,11 +10,11 @@
 
 <script>
 export default {
-  data:{
-    return:{
+ data(){
+   return{
 
-    }
-  }
+   }
+ }
 }
 </script>
 
@@ -23,7 +23,7 @@ export default {
 .photo{
   width:100%;
   height:480px;
-  background-image: url("../assets/img/banner.png") no-repeat center center;
+  background: url("../assets/img/banner.png") no-repeat center center;
   background-size:1920px  480px;
   margin:0 auto;
   .photoCenter{
