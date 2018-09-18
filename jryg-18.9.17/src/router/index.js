@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { Home,Login, main,Register} from '@/components'
+import { Home,Login, main,Register,About,ContactUs} from '@/components'
 import {  Header,Footer} from '@/layout'
 
 
@@ -28,6 +28,14 @@ export default new Router({
         path:'/register',
         name:'注册',
         component:Register,
+      },{
+        path:'/about',
+        name:'关于我们',
+        component:About,
+      },{
+        path:'/contactUs',
+        name:'联系我们',
+        component:ContactUs,
       }]
     },
      

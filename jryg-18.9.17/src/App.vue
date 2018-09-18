@@ -26,4 +26,7 @@ export default {
   color: #2c3e50;
   font-size:14px;
 }
+a{
+  color:#2c3e50;
+}
 </style>

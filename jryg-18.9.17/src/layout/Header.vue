@@ -10,11 +10,21 @@
           <router-link to="/login" >请登录，</router-link>
           <router-link to="/register" >免费注册</router-link>
         </div>
-
       </div>
-
     </div>
-    
+    <div class="logoWrap">
+      <div class="wrapCeenter">
+        <div class="logo">
+            <router-link to="/"> 
+                <img src="@/assets/img/logo.png">
+            </router-link>
+        </div>
+        <div class="shouye">
+          <router-link to="/" class="sy" >首页</router-link>
+          <router-link to="/register" >商品</router-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,12 +38,9 @@ export default {
   }
 }
 </script>
-
-
 <style lang="less" scoped>
 .header{
   width:100%;
-  height:116px;
   .headerTop{
     width:100%;
     height:36px;
@@ -62,8 +69,32 @@ export default {
           }
         }
     }
-
+  }
+  .logoWrap{
+    width:100%;
+    height:80px;
+    .wrapCeenter{
+      width:1200px;
+      height: 100%;
+      margin:0 auto;
+      display: flex;
+      justify-content: space-between;
+      line-height:80px;
+      .logo{
+        width:180px;
+        margin-top:16px;
+        img{
+          width:100%;
+        }
+      }
+      .shouye{
+        .sy{
+          display: inline-block;
+          margin-right:15px;
+          color: #db200c;
+        }
+      }
+    }
   }
 }
-
 </style>
