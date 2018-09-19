@@ -24,9 +24,13 @@
             <router-link to='/contactUs'>联系我们</router-link>
           </li>
           <span>|</span>
-          <li>风险提示</li>
+          <li>
+            <router-link to='/risktips'>风险提示</router-link>
+          </li>
           <span>|</span>
-          <li>常见问题</li>
+          <li>
+            <router-link to='/question'>常见问题</router-link>
+          </li>
         </ul>
 
       </div>

@@ -1,8 +1,10 @@
 <template>
   <div class="photo">
     <div class="photoCenter">  
-      <div class="loginBox">
-
+      <div class="loginBox"> 
+          <div class="loginBoxC">
+           登录页
+          </div>
       </div>
     </div>
   </div>
@@ -12,7 +14,6 @@
 export default {
  data(){
    return{
-
    }
  }
 }
@@ -23,7 +24,7 @@ export default {
 .photo{
   width:100%;
   height:480px;
-  background: url("../assets/img/banner.png") no-repeat center center;
+  background: url("../../assets/img/banner.png") no-repeat center center;
   background-size:1920px  480px;
   margin:0 auto;
   .photoCenter{
@@ -37,6 +38,11 @@ export default {
         width:343px;
         height: 406px;
         background: #fff;
+        .loginBoxC{
+          width:285px;
+          height:100%;
+          margin:0 auto;
+        }
   }
   }
  

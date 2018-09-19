@@ -5,11 +5,17 @@ import App from './App'
 import router from './router'
 import {
   Carousel,
-  CarouselItem
+  CarouselItem,
+  Input,
+  FormItem
   } from 'element-ui';
 
   Vue.use(Carousel)
   Vue.use(CarouselItem)
+  Vue.use(Input)
+  Vue.use(FormItem)
+
+
 
 import 'element-ui/lib/theme-chalk/index.css';
 
