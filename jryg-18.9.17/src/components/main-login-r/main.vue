@@ -11,9 +11,7 @@
 
 <script>
 
-import Header from '@/layout/Header'
-import Footer from '@/layout/Footer'
-
+import {Header,Footer} from '@/components/layout'
 
 export default {
   data () {

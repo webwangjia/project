@@ -15,12 +15,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: '首页',
       component: main,
       reject:'/',
       children:[{
         path:'/',
-        name:'首页',
         component:Home,
       },{
         path:'/login',
