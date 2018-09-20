@@ -3,17 +3,25 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import {
   Carousel,
   CarouselItem,
-  Input,
-  FormItem
+  Menu,
+  MenuItemGroup,
+  MenuItem,
   } from 'element-ui';
 
   Vue.use(Carousel)
   Vue.use(CarouselItem)
-  Vue.use(Input)
-  Vue.use(FormItem)
+  Vue.use(Menu)
+  Vue.use(MenuItemGroup)
+  Vue.use(MenuItem)
+
+
+
+
+ 
 
 
 
@@ -25,6 +33,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

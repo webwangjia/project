@@ -29,11 +29,19 @@
 </template>
 
 <script>
+
+import { mapState,mapActions } from "vuex";
 export default {
   data(){
     return {
 
     }
+  },
+   created() {
+    this.homeRequest()
+  },
+  methods:{
+    ...mapActions('home',['homeRequest'])
   }
 }
 </script>
