@@ -10,6 +10,9 @@ import {
   Menu,
   MenuItemGroup,
   MenuItem,
+  Row,
+  Button,
+  Input
   } from 'element-ui';
 
   Vue.use(Carousel)
@@ -17,6 +20,12 @@ import {
   Vue.use(Menu)
   Vue.use(MenuItemGroup)
   Vue.use(MenuItem)
+  Vue.use(Row)
+  Vue.use(Button)
+  Vue.use(Input)
+
+
+
 
 
 

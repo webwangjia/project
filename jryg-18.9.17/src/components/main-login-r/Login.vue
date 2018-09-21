@@ -3,7 +3,9 @@
     <div class="photoCenter">  
       <div class="loginBox"> 
           <div class="loginBoxC">
-           登录页
+            <h3>账户登录</h3>
+            <el-input  placeholder="请输入您登录账号"></el-input>
+            <el-input placeholder="请输入您登录密码"></el-input>
           </div>
       </div>
     </div>
@@ -42,8 +44,15 @@ export default {
           width:285px;
           height:100%;
           margin:0 auto;
+          h3{
+            color:red;
+          }
+          .el-input__inner{
+            margin-top:25px;
+            outline: red;
+          }
         }
-  }
+    }
   }
  
 }

@@ -21,6 +21,10 @@
          <p><span class="kongge">酒精</span></p>
         <p><span>生产厂商</span>泸州老窖服务有限责任公司</p>
         <p><span>全国运营商</span>龙腾岁月(天津)贸易有限公司</p>
+        <el-row>
+          <el-button type="danger" plain>立即购买</el-button>
+          <el-button type="danger">我要代理</el-button> 
+        </el-row>
       </div>
 
     </div>
@@ -89,6 +93,9 @@ export default {
           font-size:20px;
           color: #333333;
           font-weight: 600;
+        }
+        .el-row{
+          margin-top:20px;
         }
       }
     }

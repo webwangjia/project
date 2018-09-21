@@ -1,5 +1,5 @@
 <template>
-  <div>问题</div>
+   <img src="@/assets/img/444.png" >
 </template>
 
 <script>

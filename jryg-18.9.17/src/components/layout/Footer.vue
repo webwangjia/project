@@ -17,19 +17,19 @@
       <div class="footerBottom">
         <ul>
           <li>
-            <router-link to='/about'>关于我们</router-link>
+            <router-link to='/about/aboutTwo'>关于我们</router-link>
           </li>
           <span>|</span>
           <li>
-            <router-link to='/contactUs'>联系我们</router-link>
+            <router-link to='/about/contactUs'>联系我们</router-link>
           </li>
           <span>|</span>
           <li>
-            <router-link to='/risktips'>风险提示</router-link>
+            <router-link to='/about/risktips'>风险提示</router-link>
           </li>
           <span>|</span>
           <li>
-            <router-link to='/question'>常见问题</router-link>
+            <router-link to='/about/question'>常见问题</router-link>
           </li>
         </ul>
 

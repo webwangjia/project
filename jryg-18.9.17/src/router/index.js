@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import { Home,Login, main,Register} from '@/components/main-login-r'
-import { About,ContactUs,Risktips,Question} from '@/components/about'
+import { About,ContactUs,Risktips,Question,AboutTwo} from '@/components/about'
 
 
 Vue.use(Router)
@@ -27,18 +27,22 @@ export default new Router({
           },{
             path: '/about',
             component: About,
-            reject:'/about/contactUs',
                 children:[{
-                  path:'/contactUs',
+                  path:'contactUs',
+                  name:'联系我们',
                   component:ContactUs,
                 },{
-                  path:'/risktips',
-                  name:'登录',
+                  path:'risktips',
+                  name:'风险提示',
                   component:Risktips,
                 },{
-                  path:'/question',
-                  name:'注册',
+                  path:'question',
+                  name:'常见问题',
                   component:Question,
+                },{
+                  path:'aboutTwo',
+                  name:'关于我们',
+                  component:AboutTwo,
                 }] 
           },
         ] 

@@ -1,5 +1,5 @@
 <template>
-  <div>风险提示</div>
+   <img src="@/assets/img/333.png" >
 </template>
 
 <script>
