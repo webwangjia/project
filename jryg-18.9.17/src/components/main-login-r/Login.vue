@@ -4,8 +4,8 @@
       <div class="loginBox"> 
           <div class="loginBoxC">
             <h3>账户登录</h3>
-            <el-input  placeholder="请输入您登录账号"></el-input>
-            <el-input placeholder="请输入您登录密码"></el-input>
+            <el-input  placeholder="请输入您登录账号" class="one"></el-input>
+            <el-input type="password" placeholder="请输入您登录密码"></el-input>
           </div>
       </div>
     </div>
@@ -47,9 +47,10 @@ export default {
           h3{
             color:red;
           }
-          .el-input__inner{
-            margin-top:25px;
-            outline: red;
+         .el-input__inner{
+            margin-top:30px;
+            outline: none;
+            border: none;
           }
         }
     }
