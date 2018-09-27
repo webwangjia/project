@@ -15,7 +15,6 @@ const loginUrl = {
 
 
 // 商品
-
 const productUrl = {
     PRODUCTS:'/products/{0}', // 商品详情
     PRODUCTS_SPECS:'/products/{0}/specs', // 商品规格信息
@@ -28,8 +27,7 @@ const agentUrl = {
 }
 
 // 评论
-
-const evaluateUrl ={
+const evaluateUrl = {
     EVALUATE_LIST:'/comments/{0}',
     CREATED_EVALUATE:'/comments' // 创建评论
 }
@@ -62,4 +60,5 @@ const userUrl = {
     CHANGE_PASSWORD:'/user/password', // 修改密码
     UPLOAD_IMG:'/user'
 }
+
 export {API_PREFIX,loginUrl,productUrl,agentUrl,evaluateUrl,shippingUrl,orderUrl,payUrl,userUrl}

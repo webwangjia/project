@@ -6,7 +6,7 @@ import { About,ContactUs,Risktips,Question,AboutTwo} from '@/components/about'
 
 Vue.use(Router)
 
-const router = new Router({
+export default new Router({
   mode:'history',
   routes: [
     {
@@ -16,9 +16,6 @@ const router = new Router({
           children:[{
             path:'/',
             component:Home,
-            meta:{
-              isLogin:true,
-            }
           },{
             path:'/login',
             name:'登录',
@@ -54,16 +51,3 @@ const router = new Router({
      
   ]
 })
-
-router.beforeEach((to,from,next)=>{
-  if(to.meta.isLogin){ // 需要登录
-    if(!sessionStorage.TOKEN){ // 不存在token
-        router.push('/login')
-    }
-  }
-
-  next()
-
-})
-
-export default router

@@ -54,6 +54,7 @@ export default {
       },
       computed:{
         ...mapState('login/login',['loginData','isLoading'])
+
       },
       methods:{
         ...mapActions('login/login',['loginRequest','resetLoginData']),

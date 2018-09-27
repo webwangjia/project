@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 import {loginUrl} from './apis'
 import MD5 from 'js-md5'
-
 import axios from 'axios'
+
 export default {
      login(value){ // 登录请求
         // axios.post('/login')

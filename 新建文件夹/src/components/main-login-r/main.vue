@@ -19,8 +19,7 @@ export default {
     };
   },
 
-  created(){
-  },
+  created(){},
 
   computed: {},
 
