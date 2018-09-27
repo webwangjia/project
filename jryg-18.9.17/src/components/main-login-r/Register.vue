@@ -5,12 +5,28 @@
           <div class="loginBoxC">
             <h3>账户登录</h3>
             <div class="loginForm">
-              <el-input placeholder="请输入手机号"></el-input>
-              <el-input  placeholder="请输入手机验证码" type="text" class="captcha"></el-input>
-              <el-button class="captchaGet" >获取验证码</el-button>
-              <el-input  placeholder="设置密码" type="password"></el-input>
-              <el-input  placeholder="请确认密码" type="password"></el-input>
-              <el-button >注册并登录</el-button>
+              <el-form :model="registerData"
+                    status-icon
+                    :rules="rulesRegister"
+                    validateField
+                    ref="registerData"
+                    class="demo-ruleForm">
+                <el-form-item  prop="username">
+                  <el-input type="text" v-model="registerData.username" placeholder="请输入手机号"></el-input>
+                </el-form-item>
+                <el-form-item class="captcha">
+                   <el-input  placeholder="请输入手机验证码" type="text" ></el-input>
+                </el-form-item>
+                <el-button class="captchaGet" >获取验证码</el-button>
+                <el-form-item prop="password">
+                   <el-input type="password" v-model="registerData.password" placeholder="设置密码" ></el-input>
+                </el-form-item>
+                <el-form-item>
+                   <el-input  placeholder="请确认密码" type="password"></el-input>
+                </el-form-item>
+                <el-button >注册并登录</el-button>
+              </el-form>
+              
             </div>
           </div>
       </div>
@@ -19,9 +35,20 @@
 </template>
 
 <script>
+import {Phone,Password} from '@/public/rules'
+
 export default {
  data(){
    return{
+     registerData:{
+       username:"",
+       password:""
+     },
+     rulesRegister:{
+       username:[{validator: Phone, trigger: 'blur' }],
+       password:[{validator: Password, trigger: 'blur' }]
+     }
+
    }
  }
 }
@@ -54,29 +81,25 @@ export default {
           h3{
             color:red;
           }
-          .loginForm{
-            margin-top: 5px;
+          .el-form{
+            margin-top:20px;
             .el-input{
-              outline: none;
-              border:none;
-              margin-top:25px;
+               margin-top:-10px;
             }
             .captcha{
+              float: left;
               width:65%;
             }
-            .el-button--default{
+            .el-button{
               width:100%;
-              margin-top:20px;
               background: #dd2a17;
               color:#fff;
               &:hover{
-                background:red;
+                background: red;
               }
             }
             .captchaGet{
               width:35%;
-              margin-left:-5px;
-
             }
           }
         }

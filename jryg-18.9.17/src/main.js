@@ -12,7 +12,9 @@ import {
   MenuItem,
   Row,
   Button,
-  Input
+  Input,
+  Form,
+  FormItem
   } from 'element-ui';
 
   Vue.use(Carousel)
@@ -23,6 +25,10 @@ import {
   Vue.use(Row)
   Vue.use(Button)
   Vue.use(Input)
+  Vue.use(Form)
+  Vue.use(FormItem)
+
+
 
 
 

@@ -13,12 +13,12 @@
 
       </div>
       <div class="product">
-        <p>泸州老酒坊-岁月珍藏</p>
+        <p>{{reqData.product.name}}</p>
         <p><span class="kongge">价格</span>
-           <span></span>/箱
+           <span>￥{{reqData.specs.price}}</span>/箱
         </p>
-        <p><span class="kongge">规格</span></p>
-         <p><span class="kongge">酒精</span></p>
+        <p><span class="kongge">规格</span>{{reqData.specs.specs}}</p>
+         <p><span class="kongge">酒精</span>{{reqData.specs.specs}}</p>
         <p><span>生产厂商</span>泸州老窖服务有限责任公司</p>
         <p><span>全国运营商</span>龙腾岁月(天津)贸易有限公司</p>
         <el-row>
@@ -33,20 +33,29 @@
 </template>
 
 <script>
+import axios from 'axios'
 
-import { mapState,mapActions } from "vuex";
 export default {
   data(){
     return {
-
+       reqData:{}
     }
   },
    created() {
-    this.homeRequest()
+    this.home()
   },
-  methods:{
-    ...mapActions('home',['homeRequest'])
-  }
+   methods:{
+      home(){
+        axios({
+           method:'get',
+          url:'/api/',
+        }).then(res=>{
+           this.reqData = res.data
+        }).catch(err=>{
+
+        })
+      }
+  },
 }
 </script>
 
