@@ -38,7 +38,10 @@ import axios from 'axios'
 export default {
   data(){
     return {
-       reqData:{}
+       reqData:{
+         product:{},
+         specs:{},
+       }
     }
   },
    created() {

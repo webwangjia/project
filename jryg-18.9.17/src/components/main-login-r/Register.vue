@@ -14,6 +14,9 @@
                 <el-form-item  prop="username">
                   <el-input type="text" v-model="registerData.username" placeholder="请输入手机号"></el-input>
                 </el-form-item>
+                <el-form-item class="captcha" v-show="w">
+                   <el-input  placeholder="请输入手机验证码" type="text" ></el-input>
+                </el-form-item>
                 <el-form-item class="captcha">
                    <el-input  placeholder="请输入手机验证码" type="text" ></el-input>
                 </el-form-item>
@@ -47,7 +50,9 @@ export default {
      rulesRegister:{
        username:[{validator: Phone, trigger: 'blur' }],
        password:[{validator: Password, trigger: 'blur' }]
-     }
+     },
+     w:false
+
 
    }
  }

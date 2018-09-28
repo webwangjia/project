@@ -70,9 +70,10 @@ export default {
                 // 假数据token
                 //  let resData = {token:'234ndsf23sd23ndc2u3n23hn'}
                  console.log(res)
-                 sessionStorage.TOKEN = resData.token
+                 sessionStorage.TOKEN = res.token
                  this.$route.push('/')
               }).catch(err=>{
+                
               })
         }
       });  
