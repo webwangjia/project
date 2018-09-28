@@ -10,7 +10,7 @@
   <div class="productInfor">
     <div class="productInforC">
       <div class="photo">
-
+        <img :src="reqData.product.mainImg"/>
       </div>
       <div class="product">
         <p>{{reqData.product.name}}</p>
@@ -82,6 +82,7 @@ export default {
       .photo{
         width:560px;
         height:100%;
+        padding-left:50px;
       }
       .product{
         width:640px;

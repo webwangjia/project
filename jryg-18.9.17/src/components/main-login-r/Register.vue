@@ -9,7 +9,7 @@
                     status-icon
                     :rules="rulesRegister"
                     validateField
-                    ref="registerData"
+                    ref="registerRef"
                     class="demo-ruleForm">
                 <el-form-item  prop="username">
                   <el-input type="text" v-model="registerData.username" placeholder="请输入手机号"></el-input>

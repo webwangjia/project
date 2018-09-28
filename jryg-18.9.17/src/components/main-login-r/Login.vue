@@ -61,22 +61,21 @@ export default {
                  data:loginFormData,
                 // data:this.loginData,
                 // params:this.loginData,
-                // headers:{
-                //   "Content-type":'application/x-ppt',
-                //   "x-auth-token":sessionStorage.TOKEN
-                // }
+                headers:{
+                  // "Content-type":'application/x-ppt',
+                  // "x-auth-token":sessionStorage.TOKEN
+                 Authorization: 'Basic anJlZ291LXBjOmpyZWdvdS1wYy1zZWNyZXQ='
+                }
               }).then(res=>{
                 // 假数据token
-                 let resData = {token:'234ndsf23sd23ndc2u3n23hn'}
+                //  let resData = {token:'234ndsf23sd23ndc2u3n23hn'}
+                 console.log(res)
                  sessionStorage.TOKEN = resData.token
                  this.$route.push('/')
               }).catch(err=>{
-                 
               })
         }
-      });
-
-    
+      });  
    },
  }
  
