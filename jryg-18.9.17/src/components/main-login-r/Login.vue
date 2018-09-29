@@ -33,7 +33,8 @@ export default {
     return{
           loginData:{
             username:"",
-            password:""
+            password:"",
+       
           },
           rulesLogin: {
             username: [
@@ -69,7 +70,7 @@ export default {
               }).then(res=>{
                 // 假数据token
                 //  let resData = {token:'234ndsf23sd23ndc2u3n23hn'}
-                 console.log(res)
+                 c
                  sessionStorage.TOKEN = res.token
                  this.$route.push('/')
               }).catch(err=>{
