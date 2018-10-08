@@ -59,8 +59,7 @@ export default {
             axios({
               method:"get",
               url:"http://rongxin.ixiangni.cn/ixiangni/mbuser/loginNew.json",
-              data:{ usernumber:"",
-                     password:"",}
+              data:this.loginData
 
             }).then(res=>{
               console.log(res)
